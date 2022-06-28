@@ -1,9 +1,9 @@
 package com.baron.test;
 
 import com.baron.rpc.annotation.ServiceScan;
-import com.baron.rpc.serializer.CommonSerializer;
-import com.baron.rpc.transport.RpcServer;
-import com.baron.rpc.transport.netty.server.NettyServer;
+import com.baron.rpc.transport.serializer.CommonSerializer;
+import com.baron.rpc.xserver.RpcServer;
+import com.baron.rpc.xserver.NettyServer;
 
 
 @ServiceScan

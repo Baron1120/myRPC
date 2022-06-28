@@ -3,10 +3,10 @@ package com.baron.test;
 import com.baron.rpc.api.ByeService;
 import com.baron.rpc.api.HelloObject;
 import com.baron.rpc.api.HelloService;
-import com.baron.rpc.serializer.CommonSerializer;
-import com.baron.rpc.transport.RpcClient;
-import com.baron.rpc.transport.RpcClientProxy;
-import com.baron.rpc.transport.netty.client.NettyClient;
+import com.baron.rpc.transport.serializer.CommonSerializer;
+import com.baron.rpc.xclient.RpcClient;
+import com.baron.rpc.xclient.RpcClientProxy;
+import com.baron.rpc.xclient.NettyClient;
 
 
 public class TestClient {
