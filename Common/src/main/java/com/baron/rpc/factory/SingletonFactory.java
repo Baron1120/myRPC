@@ -3,10 +3,7 @@ package com.baron.rpc.factory;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 单例工厂
- * @author ziyang
- */
+
 public class SingletonFactory {
 
     private static Map<Class, Object> objectMap = new HashMap<>();

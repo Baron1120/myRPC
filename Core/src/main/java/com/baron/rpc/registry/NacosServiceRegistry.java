@@ -9,10 +9,7 @@ import com.baron.rpc.util.NacosUtil;
 
 import java.net.InetSocketAddress;
 
-/**
- * Nacos服务注册中心
- * @author ziyang
- */
+
 public class NacosServiceRegistry implements ServiceRegistry {
 
     private static final Logger logger = LoggerFactory.getLogger(NacosServiceRegistry.class);

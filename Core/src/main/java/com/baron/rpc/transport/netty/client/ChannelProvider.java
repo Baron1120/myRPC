@@ -19,10 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-/**
- * 用于获取 Channel 对象
- * @author ziyang
- */
+
 public class ChannelProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(ChannelProvider.class);
@@ -44,8 +41,8 @@ public class ChannelProvider {
         bootstrap.handler(new ChannelInitializer<SocketChannel>() {
             @Override
             protected void initChannel(SocketChannel ch) {
-                /*自定义序列化编解码器*/
-                // RpcResponse -> ByteBuf
+                
+               
                 ch.pipeline().addLast(new CommonEncoder(serializer))
                         .addLast(new IdleStateHandler(0, 5, 0, TimeUnit.SECONDS))
                         .addLast(new CommonDecoder())
@@ -81,11 +78,11 @@ public class ChannelProvider {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(eventLoopGroup)
                 .channel(NioSocketChannel.class)
-                //连接的超时时间，超过这个时间还是建立不上的话则代表连接失败
+               
                 .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5000)
-                //是否开启 TCP 底层心跳机制
+               
                 .option(ChannelOption.SO_KEEPALIVE, true)
-                //TCP默认开启了 Nagle 算法，该算法的作用是尽可能的发送大数据快，减少网络传输。TCP_NODELAY 参数的作用就是控制是否启用 Nagle 算法。
+               
                 .option(ChannelOption.TCP_NODELAY, true);
         return bootstrap;
     }

@@ -23,11 +23,7 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
-/**
- * Socket方式远程方法调用的消费者（客户端）
- *
- * @author ziyang
- */
+
 public class SocketClient implements RpcClient {
 
     private static final Logger logger = LoggerFactory.getLogger(SocketClient.class);

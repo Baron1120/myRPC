@@ -13,11 +13,7 @@ import com.baron.rpc.exception.SerializeException;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
-/**
- * Kryo序列化器
- *
- * @author ziyang
- */
+
 public class KryoSerializer implements CommonSerializer {
 
     private static final Logger logger = LoggerFactory.getLogger(KryoSerializer.class);

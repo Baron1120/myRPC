@@ -11,11 +11,7 @@ import com.baron.rpc.provider.ServiceProviderImpl;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/**
- * 进行过程调用的处理器
- *
- * @author ziyang
- */
+
 public class RequestHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(RequestHandler.class);

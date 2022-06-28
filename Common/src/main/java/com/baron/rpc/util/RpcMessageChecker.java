@@ -8,11 +8,7 @@ import com.baron.rpc.exception.RpcException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * 检查响应与请求
- *
- * @author ziyang
- */
+
 public class RpcMessageChecker {
 
     public static final String INTERFACE_NAME = "interfaceName";

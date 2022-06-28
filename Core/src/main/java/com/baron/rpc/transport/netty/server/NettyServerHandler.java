@@ -12,11 +12,7 @@ import com.baron.rpc.entity.RpcResponse;
 import com.baron.rpc.factory.SingletonFactory;
 import com.baron.rpc.handler.RequestHandler;
 
-/**
- * Netty中处理RpcRequest的Handler
- *
- * @author ziyang
- */
+
 public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
 
     private static final Logger logger = LoggerFactory.getLogger(NettyServerHandler.class);

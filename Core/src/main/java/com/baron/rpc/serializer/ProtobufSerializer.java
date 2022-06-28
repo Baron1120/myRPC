@@ -10,10 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * 使用ProtoBuf的序列化器
- * @author ziyang
- */
+
 public class ProtobufSerializer implements CommonSerializer {
 
     private LinkedBuffer buffer = LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE);
@@ -51,8 +48,8 @@ public class ProtobufSerializer implements CommonSerializer {
     private Schema getSchema(Class clazz) {
         Schema schema = schemaCache.get(clazz);
         if (Objects.isNull(schema)) {
-            // 这个schema通过RuntimeSchema进行懒创建并缓存
-            // 所以可以一直调用RuntimeSchema.getSchema(),这个方法是线程安全的
+           
+           
             schema = RuntimeSchema.getSchema(clazz);
             if (Objects.nonNull(schema)) {
                 schemaCache.put(clazz, schema);

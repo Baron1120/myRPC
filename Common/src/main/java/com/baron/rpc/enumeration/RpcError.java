@@ -3,11 +3,7 @@ package com.baron.rpc.enumeration;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-/**
- * RPC调用过程中的错误
- *
- * @author ziyang
- */
+
 @AllArgsConstructor
 @Getter
 public enum RpcError {

@@ -14,11 +14,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 
-/**
- * Socket方式远程方法调用的提供者（服务端）
- *
- * @author ziyang
- */
+
 public class SocketServer extends AbstractRpcServer {
 
     private final ExecutorService threadPool;

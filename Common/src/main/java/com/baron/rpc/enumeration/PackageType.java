@@ -3,9 +3,7 @@ package com.baron.rpc.enumeration;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-/**
- * @author ziyang
- */
+
 @AllArgsConstructor
 @Getter
 public enum PackageType {

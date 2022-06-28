@@ -12,10 +12,7 @@ import com.baron.rpc.exception.RpcException;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Socket方式从输入流中读取字节并反序列化
- * @author ziyang
- */
+
 public class ObjectReader {
 
     private static final Logger logger = LoggerFactory.getLogger(ObjectReader.class);

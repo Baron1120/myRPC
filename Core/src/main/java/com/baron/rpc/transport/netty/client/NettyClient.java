@@ -23,11 +23,7 @@ import com.baron.rpc.transport.RpcClient;
 import java.net.InetSocketAddress;
 import java.util.concurrent.CompletableFuture;
 
-/**
- * NIO方式消费侧客户端类
- *
- * @author ziyang
- */
+
 public class NettyClient implements RpcClient {
 
     private static final Logger logger = LoggerFactory.getLogger(NettyClient.class);

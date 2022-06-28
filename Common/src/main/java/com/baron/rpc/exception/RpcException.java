@@ -2,11 +2,7 @@ package com.baron.rpc.exception;
 
 import com.baron.rpc.enumeration.RpcError;
 
-/**
- * RPC调用异常
- *
- * @author ziyang
- */
+
 public class RpcException extends RuntimeException {
 
     public RpcException(RpcError error, String detail) {

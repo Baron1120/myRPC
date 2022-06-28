@@ -15,10 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-/**
- * 管理Nacos连接等工具类
- * @author ziyang
- */
+
 public class NacosUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(NacosUtil.class);

@@ -14,11 +14,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
-/**
- * 处理RpcRequest的工作线程
- *
- * @author ziyang
- */
+
 public class SocketRequestHandlerThread implements Runnable {
 
     private static final Logger logger = LoggerFactory.getLogger(SocketRequestHandlerThread.class);

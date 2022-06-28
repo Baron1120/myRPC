@@ -1,9 +1,6 @@
 package com.baron.rpc.provider;
 
-/**
- * 保存和提供服务实例对象
- * @author ziyang
- */
+
 public interface ServiceProvider {
 
 

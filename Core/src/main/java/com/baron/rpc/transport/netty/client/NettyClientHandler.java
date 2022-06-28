@@ -16,11 +16,7 @@ import com.baron.rpc.factory.SingletonFactory;
 
 import java.net.InetSocketAddress;
 
-/**
- * Netty客户端侧处理器
- *
- * @author ziyang
- */
+
 public class NettyClientHandler extends SimpleChannelInboundHandler<RpcResponse> {
 
     private static final Logger logger = LoggerFactory.getLogger(NettyClientHandler.class);

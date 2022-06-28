@@ -1,10 +1,6 @@
 package com.baron.rpc.serializer;
 
-/**
- * 通用的序列化反序列化接口
- *
- * @author ziyang
- */
+
 public interface CommonSerializer {
 
     Integer KRYO_SERIALIZER = 0;

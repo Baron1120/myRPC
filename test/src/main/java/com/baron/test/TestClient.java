@@ -8,12 +8,8 @@ import com.baron.rpc.transport.RpcClient;
 import com.baron.rpc.transport.RpcClientProxy;
 import com.baron.rpc.transport.netty.client.NettyClient;
 
-/**
- * 测试用Netty消费者
- *
- * @author ziyang
- */
-public class NettyTestClient {
+
+public class TestClient {
 
     public static void main(String[] args) {
         RpcClient client = new NettyClient(CommonSerializer.PROTOBUF_SERIALIZER);

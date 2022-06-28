@@ -4,9 +4,7 @@ import com.alibaba.nacos.api.naming.pojo.Instance;
 
 import java.util.List;
 
-/**
- * @author ziyang
- */
+
 public class RoundRobinLoadBalancer implements LoadBalancer {
 
     private int index = 0;

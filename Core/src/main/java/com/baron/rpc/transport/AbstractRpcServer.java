@@ -13,9 +13,7 @@ import com.baron.rpc.util.ReflectUtil;
 import java.net.InetSocketAddress;
 import java.util.Set;
 
-/**
- * @author ziyang
- */
+
 public abstract class AbstractRpcServer implements RpcServer {
 
     protected Logger logger = LoggerFactory.getLogger(this.getClass());

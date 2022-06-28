@@ -7,11 +7,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import com.baron.rpc.entity.RpcRequest;
 import com.baron.rpc.enumeration.PackageType;
 
-/**
- * 通用的编码拦截器
- *
- * @author ziyang
- */
+
 public class CommonEncoder extends MessageToByteEncoder {
 
     private static final int MAGIC_NUMBER = 0xCAFEBABE;

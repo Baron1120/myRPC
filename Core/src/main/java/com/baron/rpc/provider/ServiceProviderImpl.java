@@ -9,10 +9,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * 默认的服务注册表，保存服务端本地服务
- * @author ziyang
- */
+
 public class ServiceProviderImpl implements ServiceProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(ServiceProviderImpl.class);

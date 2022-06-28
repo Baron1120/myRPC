@@ -11,11 +11,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-/**
- * 基于Hessian协议的序列化器
- *
- * @author ziyang
- */
+
 public class HessianSerializer implements CommonSerializer {
 
     private static final Logger logger = LoggerFactory.getLogger(HessianSerializer.class);

@@ -18,11 +18,7 @@ import com.baron.rpc.transport.AbstractRpcServer;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * NIO方式服务提供侧
- *
- * @author ziyang
- */
+
 public class NettyServer extends AbstractRpcServer {
 
     private final CommonSerializer serializer;

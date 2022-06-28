@@ -13,9 +13,7 @@ import com.baron.rpc.util.NacosUtil;
 import java.net.InetSocketAddress;
 import java.util.List;
 
-/**
- * @author ziyang
- */
+
 public class NacosServiceDiscovery implements ServiceDiscovery {
 
     private static final Logger logger = LoggerFactory.getLogger(NacosServiceDiscovery.class);

@@ -6,9 +6,7 @@ import com.baron.rpc.annotation.Service;
 import com.baron.rpc.api.HelloObject;
 import com.baron.rpc.api.HelloService;
 
-/**
- * @author ziyang
- */
+
 @Service
 public class HelloServiceImpl implements HelloService {
 

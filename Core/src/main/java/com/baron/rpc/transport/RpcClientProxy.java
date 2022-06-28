@@ -14,11 +14,7 @@ import java.lang.reflect.Proxy;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
-/**
- * RPC客户端动态代理
- *
- * @author ziyang
- */
+
 public class RpcClientProxy implements InvocationHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(RpcClientProxy.class);

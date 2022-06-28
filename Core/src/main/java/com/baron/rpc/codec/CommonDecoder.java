@@ -14,11 +14,7 @@ import com.baron.rpc.exception.RpcException;
 
 import java.util.List;
 
-/**
- * 通用的解码拦截器
- *
- * @author ziyang
- */
+
 public class CommonDecoder extends ReplayingDecoder {
 
     private static final Logger logger = LoggerFactory.getLogger(CommonDecoder.class);

@@ -5,9 +5,7 @@ import org.slf4j.LoggerFactory;
 import com.baron.rpc.factory.ThreadPoolFactory;
 import com.baron.rpc.util.NacosUtil;
 
-/**
- * @author ziyang
- */
+
 public class ShutdownHook {
 
     private static final Logger logger = LoggerFactory.getLogger(ShutdownHook.class);

@@ -5,9 +5,7 @@ import com.baron.rpc.entity.RpcResponse;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * @author ziyang
- */
+
 public class UnprocessedRequests {
 
     private static ConcurrentHashMap<String, CompletableFuture<RpcResponse>> unprocessedResponseFutures = new ConcurrentHashMap<>();
