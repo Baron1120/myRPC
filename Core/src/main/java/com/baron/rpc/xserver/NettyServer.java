@@ -14,25 +14,24 @@ import com.baron.rpc.transport.codec.CommonEncoder;
 import com.baron.rpc.hook.ShutdownHook;
 import com.baron.rpc.service.provider.ServiceProviderImpl;
 import com.baron.rpc.service.registry.NacosServiceRegistry;
-
+import org.springframework.stereotype.Component;
 import java.util.concurrent.TimeUnit;
 
-
+@Component
 public class NettyServer extends AbstractRpcServer {
+    public static final int port = 9999;
 
-    private final CommonSerializer serializer;
+    private final CommonSerializer serializer = CommonSerializer.getByCode(DEFAULT_SERIALIZER);
 
-    public NettyServer(String host, int port) {
-        this(host, port, DEFAULT_SERIALIZER);
-    }
-
-    public NettyServer(String host, int port, Integer serializer) {
-        this.host = host;
-        this.port = port;
+    public NettyServer() {
+        try {
+//            host = InetAddress.getLocalHost().getHostAddress();
+            host = "127.0.0.1";
+        } catch (Exception e) {
+            logger.info("服务器获取ip地址失败");
+        }
         serviceRegistry = new NacosServiceRegistry();
         serviceProvider = new ServiceProviderImpl();
-        this.serializer = CommonSerializer.getByCode(serializer);
-        scanServices();
     }
 
     @Override

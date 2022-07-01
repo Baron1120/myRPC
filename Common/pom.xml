@@ -13,6 +13,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.baron</groupId>
+            <artifactId>core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
@@ -21,6 +26,11 @@
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>
             <version>1.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
         </dependency>
     </dependencies>
 

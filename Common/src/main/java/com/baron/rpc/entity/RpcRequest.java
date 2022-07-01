@@ -23,6 +23,11 @@ public class RpcRequest implements Serializable {
     
     private Class<?>[] paramTypes;
 
+
+    private String group;
+
+    private String version;
+
     
     private Boolean heartBeat;
 

@@ -18,10 +18,10 @@ import com.baron.rpc.exception.RpcException;
 import com.baron.rpc.factory.SingletonFactory;
 import com.baron.rpc.service.registry.NacosServiceDiscovery;
 import com.baron.rpc.service.registry.ServiceDiscovery;
+import org.springframework.stereotype.Component;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.CompletableFuture;
-
 
 public class NettyClient implements RpcClient {
 
@@ -64,7 +64,7 @@ public class NettyClient implements RpcClient {
         }
         CompletableFuture<RpcResponse> resultFuture = new CompletableFuture<>();
         try {
-            InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest.getInterfaceName());
+            InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest.getInterfaceName() + rpcRequest.getGroup() + rpcRequest.getVersion());
             Channel channel = ChannelProvider.get(inetSocketAddress, serializer);
             if (!channel.isActive()) {
                 group.shutdownGracefully();

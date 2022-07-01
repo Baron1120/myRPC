@@ -1,25 +1,20 @@
 package com.baron.test;
 
-import com.baron.rpc.api.ByeService;
-import com.baron.rpc.api.HelloObject;
-import com.baron.rpc.api.HelloService;
-import com.baron.rpc.transport.serializer.CommonSerializer;
-import com.baron.rpc.xclient.RpcClient;
-import com.baron.rpc.xclient.RpcClientProxy;
-import com.baron.rpc.xclient.NettyClient;
+import com.baron.rpc.annotation.RpcScan;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.slf4j.Logger;
 
-
+@RpcScan(basePackage = {"com.baron"})
 public class TestClient {
-
     public static void main(String[] args) {
-        RpcClient client = new NettyClient(CommonSerializer.PROTOBUF_SERIALIZER);
-        RpcClientProxy rpcClientProxy = new RpcClientProxy(client);
-        HelloService helloService = rpcClientProxy.getProxy(HelloService.class);
-        HelloObject object = new HelloObject(12, "This is a message");
-        String res = helloService.hello(object);
-        System.out.println(res);
-        ByeService byeService = rpcClientProxy.getProxy(ByeService.class);
-        System.out.println(byeService.bye("Netty"));
+        Logger logger = LoggerFactory.getLogger(TestClient.class);
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(TestClient.class);
+        HelloController helloController = (HelloController) applicationContext.getBean("helloController");
+        try {
+            helloController.test();
+        } catch (Exception e) {
+            logger.info("调用HelloController出错");
+        }
     }
-
 }

@@ -1,10 +1,13 @@
 package com.baron.rpc.xserver;
 
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
 import io.netty.util.ReferenceCountUtil;
+import org.checkerframework.checker.units.qual.C;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.baron.rpc.entity.RpcRequest;
@@ -26,13 +29,18 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> 
     protected void channelRead0(ChannelHandlerContext ctx, RpcRequest msg) throws Exception {
         try {
             if(msg.getHeartBeat()) {
-                logger.info("接收到客户端心跳包...");
+                logger.info("服务端已收到客户端心跳");
                 return;
             }
             logger.info("服务器接收到请求: {}", msg);
             Object result = requestHandler.handle(msg);
             if (ctx.channel().isActive() && ctx.channel().isWritable()) {
-                ctx.writeAndFlush(RpcResponse.success(result, msg.getRequestId()));
+                ctx.writeAndFlush(RpcResponse.success(result, msg.getRequestId())).addListener(new ChannelFutureListener() {
+                    @Override
+                    public void operationComplete(ChannelFuture future) throws Exception {
+                        logger.info("服务端已发送处理结果，当前RequestId：" + msg.getRequestId());
+                    }
+                });
             } else {
                 logger.error("通道不可写");
             }
